@@ -1,5 +1,8 @@
 package com.example.demo12.dto;
 
+import lombok.Data;
+
+@Data
 public class BoardDTO {
 
     private long num;

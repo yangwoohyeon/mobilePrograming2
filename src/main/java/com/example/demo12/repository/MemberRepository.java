@@ -5,11 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface MemberRepository extends JpaRepository<Member, Long> {
+public interface MemberRepository extends JpaRepository<Member,Long>{
+    List<Member> findAll();
 
-    Member findByEmail(String email);// email로 Member 찾기
-
-    List<Member> findAll(); //모두 가지고 와서 LIST에 넣어줌. 선언만 해줌
-
-
+    Member findByEmail(String email);
 }

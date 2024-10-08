@@ -16,9 +16,7 @@ public class SampleController5 {
     @Autowired
     private final MemberService memberService;
 
-    public SampleController5(MemberService memberService) {
-        this.memberService = memberService;
-    }
+    public SampleController5(MemberService memberService){this.memberService=memberService;}
 
 
     @GetMapping(value = "sample5")
@@ -32,8 +30,8 @@ public class SampleController5 {
  */
         //스프링 데이터 JPA 사용 예제
 
-        List<MemberDTO> arrlist = memberService.getMemberLists(); // 멤버 목록을 가지고옴
-        model.addAttribute("memberList", arrlist); //컨트롤러에 항상 들어가는 부분
+        List<MemberDTO> arrlist = memberService.getMemberLists();
+        model.addAttribute("memberList",arrlist);
         return "sample5";
     }
 

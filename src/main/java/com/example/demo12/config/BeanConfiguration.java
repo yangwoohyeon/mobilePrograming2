@@ -9,5 +9,5 @@ public class BeanConfiguration {
     @Bean
     public ModelMapper modelMapper(){
         return new ModelMapper();
-    }
+    } //ModelMapper 사용을 위해 필요함
 }
