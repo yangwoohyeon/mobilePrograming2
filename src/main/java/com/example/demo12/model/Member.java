@@ -10,7 +10,7 @@ import javax.persistence.*;
 public class Member {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //필드값을 DB가 자동 생성
     @Column(name = "NUM")
     private long num;
     @Column(nullable = false, length = 20)

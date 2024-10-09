@@ -12,7 +12,7 @@ public class SampleController1 {
     public String sample1(Model model) {
 
         BoardDTO boarddto = new BoardDTO(1, "board 객체", "작성자1");
-        model.addAttribute("boardDTO", boarddto);
+        model.addAttribute("boardDTO",boarddto);
         return "sample1";
     }
 
