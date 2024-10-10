@@ -19,7 +19,7 @@ public class Member {
     private String id;
     @Column(nullable = false, length = 12)
     private String phone;
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false, unique = true) //unique=true ==> 고유해야 한다. 중복값 허용 X
     private String email;
 
     public long getNum() {

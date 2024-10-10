@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 
-@Slf4j
+@Slf4j //로그 찍기
 @Controller
 public class SampleController3 {
 
