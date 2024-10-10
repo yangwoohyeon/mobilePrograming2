@@ -16,15 +16,16 @@ import java.util.stream.Collectors;
 
 @Service
 @Transactional
-@RequiredArgsConstructor //final로 선언된 필드의 생성자를 자동으로 생성
+@RequiredArgsConstructor //final로 선언된 필드의 생성자를 자동으로 생성0
 public class MemberService {
    private final MemberRepository memberRepository;
-   @Autowired //스프링 컨테이너에서 빈으로 주입 받는다.
+
+   @Autowired //스프링 컨테이너에서 빈으로 주입 받는다. Dependency Injection;
    ModelMapper modelMapper;
 
-   public List<MemberDTO> getMemberLists(){
-       List<Member> listMember = memberRepository.findAll();
-       List<MemberDTO> resultList = listMember.stream().map(member->modelMapper.map(member,MemberDTO.class)).collect(Collectors.toList());
-       return resultList;
-   }
+  public List<MemberDTO> getMemberLists(){
+      List<Member> listMember = memberRepository.findAll();
+      List<MemberDTO> resultList = listMember.stream().map(member->modelMapper.map(member,MemberDTO.class)).collect(Collectors.toList());
+      return resultList;
+  }
 }

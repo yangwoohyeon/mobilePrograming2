@@ -31,7 +31,7 @@ public class SampleController3 {
         return "sample3";
     }
 
-    @GetMapping(value = "/member/memberDeleteOk")
+    @GetMapping(value="/member/memberDeleteOk")
     public String delete(@RequestParam( value = "num", required=false) Integer num, Model model) {
 
         if (num == null) {
@@ -42,8 +42,6 @@ public class SampleController3 {
             log.warn(" warn log={}", num);
             log.error("error log={}", num);
             return "redirect:/member/memberList";
-
-
         }
 
         System.out.println(num);
