@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 
 @Service
 @Transactional
-@RequiredArgsConstructor //final로 선언된 필드의 생성자를 자동으로 생성0
+@RequiredArgsConstructor //final로 선언된 필드의 생성자를 자동으로 생성
 public class MemberService {
    private final MemberRepository memberRepository;
 
