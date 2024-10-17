@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface MemberRepository extends JpaRepository<Member,Long>{
+public interface MemberRepository extends JpaRepository<Member,Long>{ //반환형 안붙힘!!
     List<Member> findAll(); //Spring Data JPA 장점 활용 public 붙히면 안됨
 
     Member findByEmail(String email);
