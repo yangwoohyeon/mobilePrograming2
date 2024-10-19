@@ -9,4 +9,7 @@ public interface MemberRepository extends JpaRepository<Member,Long>{ //기본�
     List<Member> findAll(); //Spring Data JPA 장점 활용 public 붙히면 안됨
 
     Member findByEmail(String email);
+
+    Member findByName(String name);
+
 }
