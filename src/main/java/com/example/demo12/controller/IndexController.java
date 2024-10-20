@@ -16,6 +16,12 @@ public class IndexController {
                        @RequestParam(value="name2",required=false) String name2,Model model){
         model.addAttribute("name",name);
         model.addAttribute("name2",name2);
+        log.trace("trace log={}",name);
+        log.debug("debug log={}",name);
+        log.info("info log={}",name);
+        log.warn("warn log={}",name);
+        log.error("error log={}",name);
+
         return "test";
     }
 

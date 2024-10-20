@@ -13,6 +13,7 @@ import java.util.List;
 @Controller
 public class SampleController5 {
 
+
     @Autowired
     private final MemberService memberService;
 
