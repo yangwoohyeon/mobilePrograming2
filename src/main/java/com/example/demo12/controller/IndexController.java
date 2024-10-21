@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class IndexController {
 
-    @GetMapping(value = "test")//bhttp://localhost:8080/test?name2=Doe
+    @GetMapping(value = "test")//http://localhost:8080/test?name2=Doe
     public String test(@RequestParam(value="name",required=false) String name,
                        @RequestParam(value="name2",required=false) String name2,Model model){
         model.addAttribute("name",name);
