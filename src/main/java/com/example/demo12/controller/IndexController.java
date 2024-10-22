@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@Slf4j
+@Slf4j //로그 생성
 @Controller
 public class IndexController {
 
