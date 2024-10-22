@@ -1,8 +1,14 @@
 package com.example.demo12.dto;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Data
+@Getter
+@Setter
+@NoArgsConstructor
 public class BoardDTO {
 
     private long num;
