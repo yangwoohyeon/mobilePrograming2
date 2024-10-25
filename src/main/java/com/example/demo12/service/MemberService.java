@@ -20,7 +20,8 @@ import java.util.stream.Collectors;
 public class MemberService {
 
     private final MemberRepository memberRepository;
-   @Autowired //스프링 컨테이너에서 빈으로 주입 받는다. Dependency Injection;
+
+    @Autowired //스프링 컨테이너에서 빈으로 주입 받는다. Dependency Injection;
    ModelMapper modelMapper;
 
  public List<MemberDTO> getMemberLists(){
