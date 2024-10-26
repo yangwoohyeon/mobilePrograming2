@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class ItemDTO { //DTO 객체
+public class ItemDTO {
     private String itemname;
     private String itemprice;
 }
