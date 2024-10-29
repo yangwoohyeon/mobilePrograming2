@@ -12,7 +12,7 @@ public class Demo12Application {
 		SpringApplication.run(Demo12Application.class, args);
 	}
 
-	@GetMapping(value = "/1")
+	@GetMapping(value = "/1") //home
 	public String f1() {
 		return "home";
 	}
