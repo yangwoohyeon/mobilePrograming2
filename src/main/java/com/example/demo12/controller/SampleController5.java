@@ -24,15 +24,6 @@ public class SampleController5 {
 
     @GetMapping(value = "sample5")
     public String sample5(Model model) {
-/*
-        MemberDTO memberdto = new MemberDTO(1, "홍길동", "gdhong", "010-1234-1234");
-
-        ArrayList<MemberDTO> arrlist = new ArrayList<MemberDTO>();
-        arrlist.add(memberdto);
-
- */
-        //스프링 데이터 JPA 사용 예제
-
         List<MemberDTO> arrlist = memberService.getMemberLists();
         model.addAttribute("memberList",arrlist);
         return "sample5";

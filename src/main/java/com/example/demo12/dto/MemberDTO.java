@@ -15,54 +15,6 @@ public class MemberDTO {
     private String name;
     private String id;
     private String phone;
-
-    /*
-    public MemberDTO(long num, String name, String id, String phone) {
-        this.num = num;
-        this.name = name;
-        this.id = id;
-        this.phone = phone;
-    }
-
-    public MemberDTO(Member member) {
-        this.num = member.getNum();
-        this.name = member.getName();
-        this.id = member.getId();
-        this.phone = member.getPhone();
-    }
-
-
-    public long getNum() {
-        return num;
-    }
-
-    public void setNum(long num) {
-        this.num = num;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
- */
+    //Lombok 사용으로 게터 세터 생략 가능
+    //NoArgsConstructor 사용으로 생성자 자동 생성
 }
