@@ -46,7 +46,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="row : ${memberList}"}>
+    <tr th:each="row : ${memberList}">
       <td th:text="${row.num}"></td>
       <td th:text="${row.name}"></td>
       <td th:text="${row.id}"></td>
@@ -91,7 +91,7 @@
   function btnDel( num ) {
     // 컨펌
     if (confirm(num + "번 항목을 삭제하시겠습니까?") == true) {
-      location.href='/member/memberDeleteOk?num=' + num;
+      location.href='/memberDeleteOk?num=' + num;
     }
     else {
       return;

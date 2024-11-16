@@ -15,6 +15,7 @@ public class MemberDTO {
     private String name;
     private String id;
     private String phone;
+    private String email; // 추가
     //Lombok 사용으로 게터 세터 생략 가능
     //NoArgsConstructor 사용으로 생성자 자동 생성
 }

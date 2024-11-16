@@ -29,4 +29,8 @@ public class MemberService {
     List<MemberDTO> resultList = mlist.stream().map(member->modelMapper.map(member,MemberDTO.class)).collect(Collectors.toList());
     return resultList;
  }
+
+    public void deleteMember(long num) {
+        memberRepository.deleteById(num);
+    }
 }

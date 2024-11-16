@@ -7,7 +7,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class BeanConfiguration {
     @Bean
-    public ModelMapper modelMapper(){
-        return new ModelMapper();
-    } //ModelMapper 사용을 위해 필요함
+    public ModelMapper modelMapper() {
+        ModelMapper modelMapper = new ModelMapper();
+        modelMapper.getConfiguration()
+                .setFieldMatchingEnabled(true) // 필드 이름으로 매핑
+                .setFieldAccessLevel(org.modelmapper.config.Configuration.AccessLevel.PRIVATE); // private 필드 접근 허용
+        return modelMapper;
+    }
 }

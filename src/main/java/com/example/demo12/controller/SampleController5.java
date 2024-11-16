@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +16,7 @@ import java.util.List;
 public class SampleController5 {
 
 
-    @Autowired
+    @Autowired //의존성 주입
     private final MemberService memberService;
 
     public SampleController5(MemberService memberService){
@@ -26,7 +28,15 @@ public class SampleController5 {
     public String sample5(Model model) {
         List<MemberDTO> arrlist = memberService.getMemberLists();
         model.addAttribute("memberList",arrlist);
+        System.out.println("Controller arrlist: " + arrlist);
         return "sample5";
+    }
+
+    @GetMapping(value = "memberDeleteOk")
+    public String sample5(@RequestParam(name="num") String num) {
+        Long longnum = Long.parseLong(num);
+        memberService.deleteMember(longnum);
+        return "sample6";
     }
 
 }
