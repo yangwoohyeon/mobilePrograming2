@@ -34,8 +34,8 @@ public class SampleController5 {
 
     @GetMapping(value = "memberDeleteOk")
     public String sample5(@RequestParam(name="num") String num) {
-        Long longnum = Long.parseLong(num);
-        memberService.deleteMember(longnum);
+        Long longnum = Long.parseLong(num);//Long형으로 형변환
+        memberService.deleteMember(longnum);//member 삭제
         return "sample6";
     }
 
