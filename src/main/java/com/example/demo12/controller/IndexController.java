@@ -2,15 +2,13 @@ package com.example.demo12.controller;
 
 import com.example.demo12.dto.ItemDTO;
 import com.example.demo12.dto.MemberDTO;
+import com.example.demo12.model.Member;
 import com.example.demo12.service.MemberService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -32,7 +30,21 @@ public class IndexController {
 
         List<MemberDTO> arrlist = memberService.getMemberLists();
 
-        return "/thymeleaf/param6re";
+        return "/param6";
     }
+
+
+    @PostMapping(value = "/param4")
+    @ResponseBody //@ResponseBody 꼭 필요함
+    public List<MemberDTO> jsonexample1() {
+        // model.addAttribute("itemname", item.getItemname());
+        //model.addAttribute("itemprice", item.getItemprice());
+
+        List<MemberDTO> arrlist = memberService.getMemberLists();
+        //model.addAttribute("itemprice",arrlist);
+
+        return arrlist;
+    }
+
 
 }
