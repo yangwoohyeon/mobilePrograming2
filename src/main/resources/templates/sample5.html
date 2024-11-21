@@ -88,15 +88,12 @@
 
   // 삭제 클릭시 --> 컨펌 --> 삭제 처리
 
-  function btnDel( num ) {
-    // 컨펌
-    if (confirm(num + "번 항목을 삭제하시겠습니까?") == true) {
-      location.href='/memberDeleteOk?num=' + num;
-    }
-    else {
+  function btnDel(num){
+    if(confirm(num+"번 항목을 삭제 하시겠습니까?")==true){
+      location.href='/memberDeleteOk?num='+num;
+    }else{
       return;
     }
-    // 비교
   }
 
 </script>

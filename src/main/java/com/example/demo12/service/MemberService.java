@@ -24,12 +24,11 @@ public class MemberService {
     @Autowired //스프링 컨테이너에서 빈으로 주입 받는다. Dependency Injection;
    ModelMapper modelMapper;
 
- public List<MemberDTO> getMemberLists(){
-    List<Member> mlist = memberRepository.findAll();
-    List<MemberDTO> resultList = mlist.stream().map(member->modelMapper.map(member,MemberDTO.class)).collect(Collectors.toList());
-    return resultList;
- }
-
+    public List<MemberDTO> getMemberLists(){
+        List<Member> mlist = memberRepository.findAll();
+        List<MemberDTO> resultList = mlist.stream().map(member->modelMapper.map(member,MemberDTO.class)).collect(Collectors.toList());
+        return resultList;
+    }
     public void deleteMember(long num) {
         memberRepository.deleteById(num);
     }
