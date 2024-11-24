@@ -34,17 +34,12 @@ public class IndexController {
     }
 
 
-    @PostMapping(value = "/param4")
-    @ResponseBody //@ResponseBody 꼭 필요함
-    public List<MemberDTO> jsonexample1() {
-        // model.addAttribute("itemname", item.getItemname());
-        //model.addAttribute("itemprice", item.getItemprice());
-
-        List<MemberDTO> arrlist = memberService.getMemberLists();
-        //model.addAttribute("itemprice",arrlist);
-
-        return arrlist;
-    }
+ @PostMapping(value="/param4")
+ @ResponseBody //반환값이 Json, Xml형식으로 HTTP응답 본문에 포함됨
+    public List<MemberDTO> json(){
+        List<MemberDTO> mlist = memberService.getMemberLists();
+        return mlist;
+ }
 
 
 }
