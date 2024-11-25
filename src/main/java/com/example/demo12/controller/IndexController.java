@@ -4,7 +4,9 @@ import com.example.demo12.dto.ItemDTO;
 import com.example.demo12.dto.MemberDTO;
 import com.example.demo12.model.Member;
 import com.example.demo12.service.MemberService;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.hibernate.cache.spi.support.AbstractReadWriteAccess;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -34,12 +36,17 @@ public class IndexController {
     }
 
 
- @PostMapping(value="/param4")
+ @PostMapping(value="param4")
  @ResponseBody //반환값이 Json, Xml형식으로 HTTP응답 본문에 포함됨
     public List<MemberDTO> json(){
         List<MemberDTO> mlist = memberService.getMemberLists();
         return mlist;
  }
 
+ @PostMapping(value="/param8")
+ @ResponseBody
+    public ItemDTO json(@RequestBody ItemDTO itemDTO){
+        return itemDTO;
+ }
 
 }
