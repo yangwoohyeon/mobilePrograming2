@@ -36,8 +36,8 @@ public class SampleController3 {
 
         if (num == null) {
             System.out.println("null 입니다");
-            log.trace("trace log={}", num);
-            log.debug("debug log={}", num);
+           log.trace("trace log={}",num);
+           log.debug("debug log={}",num);
             log.info(" info log={}", num);
             log.warn(" warn log={}", num);
             log.error("error log={}", num);

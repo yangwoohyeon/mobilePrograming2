@@ -40,4 +40,13 @@ public class SampleController5 {
         memberService.deleteMember(longnum);
         return "sample6";
     }
+    @GetMapping(value="test2")
+    public String test2(){
+       return "test2";
+    }
+
+    @GetMapping(value="test1")
+    public String test1(){
+       return "test1";
+    }
 }
