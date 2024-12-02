@@ -15,11 +15,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/test1").permitAll()
                 .antMatchers("/test3").hasRole("ADMIN")
-                .antMatchers("/test4").denyAll()
                 .anyRequest().authenticated();
-
-
         http
                 .formLogin();
+
+        http
+                .logout()
+                .logoutUrl("/logout");
     }
 }

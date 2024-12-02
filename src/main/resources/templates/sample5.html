@@ -52,7 +52,7 @@
       <td th:text="${row.id}"></td>
       <td th:text="${row.phone}"></td>
       <td><a href="#" th:href="@{/member/memberWriteFormNew( num=${row.num} )}">수정</a></td>
-      <td><a href="#" th:onclik="btnDel([[${row.num}]]);">삭제</a></td>
+      <td><a href="#" th:onclick="btnDel([[${row.num}]]);">삭제</a></td>
     </tr>
     <tr>
       <td class="bg-primary">#</td>
