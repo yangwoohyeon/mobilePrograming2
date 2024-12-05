@@ -10,17 +10,18 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
-    protected void configure(HttpSecurity http) throws Exception {
+    protected void configure(HttpSecurity http) throws Exception{
         http
                 .authorizeRequests()
                 .antMatchers("/test1").permitAll()
                 .antMatchers("/test3").hasRole("ADMIN")
                 .anyRequest().authenticated();
+
         http
                 .formLogin();
 
         http
-                .logout()
-                .logoutUrl("/logout");
+                .logout().logoutUrl("/logout");
+
     }
 }
