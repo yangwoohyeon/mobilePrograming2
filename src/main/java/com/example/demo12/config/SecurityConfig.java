@@ -12,10 +12,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception{
         http
+                .csrf().disable() // CSRF 비활성화
                 .authorizeRequests()
                 .antMatchers("/test1").permitAll()
                 .antMatchers("/test3").hasRole("ADMIN")
-                .anyRequest().authenticated();
+                .antMatchers("/param0").permitAll()
+                .anyRequest().permitAll();
 
         http
                 .formLogin();

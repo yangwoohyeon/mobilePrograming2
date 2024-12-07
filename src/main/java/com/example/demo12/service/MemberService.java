@@ -19,10 +19,11 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor //final로 선언된 필드의 생성자를 자동으로 생성
 public class MemberService {
 
+
     private final MemberRepository memberRepository;
 
     @Autowired //스프링 컨테이너에서 빈으로 주입 받는다. Dependency Injection;
-   ModelMapper modelMapper;
+    ModelMapper modelMapper;
 
     public List<MemberDTO> getMemberLists(){
         List<Member> mlist = memberRepository.findAll();
