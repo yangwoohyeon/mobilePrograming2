@@ -90,7 +90,7 @@
 
   function btnDel(num){
     if(confirm(num+"번 회원 삭제?")==true){
-      location.href='/memberDeleteOk?num='+num;
+      location.href='/memberDeleteOk?num='+num; //경로를 시작할때 꼭 /를 넣어야돼!!!!!!!!!!!!
     }else{
       return;
     }

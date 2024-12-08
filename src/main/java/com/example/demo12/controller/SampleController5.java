@@ -35,6 +35,7 @@ public class SampleController5 {
     @GetMapping(value = "memberDeleteOk")
     public String memberDelete(@RequestParam(name="num") String num){
         Long longnum = Long.parseLong(num);
+        log.trace("trace log2={}",longnum);
         memberService.deleteMember(longnum);
         return "sample6";
     }
