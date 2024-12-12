@@ -1,5 +1,6 @@
 package com.example.demo12.controller;
 
+import com.example.demo12.dto.ItemDTO;
 import com.example.demo12.dto.MemberDTO;
 import com.example.demo12.service.MemberService;
 import lombok.extern.slf4j.Slf4j;
@@ -54,5 +55,10 @@ public class SampleController5 {
     public List<MemberDTO> param0(){
        List<MemberDTO> m = memberService.getMemberLists();
        return m;
+    }
+
+    @PostMapping(value="/param3")
+    public String param3(@RequestBody ItemDTO itemDTO){
+       return "param3";
     }
 }
